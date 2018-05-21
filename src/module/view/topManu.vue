@@ -1,9 +1,15 @@
 <template>
   <div class="top_manu">
-      <li v-for="(item,index) in manu" :key="index">
+      <ul>
+        <li v-for="(item,index) in manu" :key="index">
           <a href="#" @click="clickLink($event,index)" :class="activeIndex==index?'active':''">{{item}}</a>
       </li>
       <li>………</li>
+      </ul>
+      <div>
+        <button>注册</button>
+        <button>登录</button>        
+      </div>
   </div>
 </template>
 
@@ -28,15 +34,42 @@ export default {
 <style lang="scss" scoped>
 .top_manu {
   display: flex;
-  li {
-    padding-left: 6px;
-    a {
-      color: #fff;
-      padding-bottom: 4px;
+  justify-content: space-between;
+  padding: 6px 50px;
+  ul {
+    display: flex;
+    li {
+      padding-left: 12px;
+      a {
+        color: #fff;
+        padding-bottom: 4px;
+      }
+      .active {
+        border-bottom: 1px solid #fff;
+      }
     }
-    .active {
-      border-bottom: 1px solid #fff;
-    }
+  }
+  button {
+    width:60px;
+    height:30px;
+    line-height:30px;
+    background-color: transparent;
+    border: 0;
+    color:#fff;
+    text-align: center;
+  }
+  button:nth-child(1){
+    background-color:#AE0000;
+  }
+  button:nth-child(1):hover{
+    background-color:#DC143C;
+  }
+  button:nth-child(2){
+    border:1px solid #fff;
+  }
+  button:nth-child(2):hover{
+    background-color: #fff;
+    color:black;
   }
 }
 </style>
