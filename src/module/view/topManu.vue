@@ -35,11 +35,11 @@ export default {
 .top_manu {
   display: flex;
   justify-content: space-between;
-  padding: 6px 50px;
+  padding: 10px 50px;
   ul {
     display: flex;
     li {
-      padding-left: 12px;
+      padding-left: 18px;
       a {
         color: #fff;
         padding-bottom: 4px;
@@ -57,6 +57,7 @@ export default {
     border: 0;
     color:#fff;
     text-align: center;
+    box-sizing: border-box;
   }
   button:nth-child(1){
     background-color:#AE0000;
